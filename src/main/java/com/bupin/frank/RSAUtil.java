@@ -13,21 +13,16 @@ import java.security.spec.X509EncodedKeySpec;
 
 public class RSAUtil {
 //    private static int MAX_ENCRIPT_SIZE = 245;
-//
 //    public static void main(String[] args) throws Exception {
 //        String algorithm = "RSA";
 //        String input = "frank";
 ////        generateKeys(algorithm, "test.pri", "test.pub");
-//
 //        PrivateKey privateKey = getPrivateKey("test.pri", algorithm);
 //        PublicKey publicKey = getPublicKey("test.pub", algorithm);
-//
 //        String encryptData = RSAEncrypt(algorithm, privateKey, input, 245);
 //        System.out.println("encryptData###" + encryptData+"###");
-//
 //        String decryptData = RSADecrypt(algorithm, publicKey, encryptData, 256);
 //        System.out.println("decryptData=" + decryptData);
-//
 //    }
 
     public static PrivateKey getPrivateKey(String priPath, String algorithm) throws Exception {
