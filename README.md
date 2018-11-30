@@ -41,7 +41,7 @@ public class HashDemo {
         String sha512 = getDigest(input, "SHA-512");
         System.out.println("sha512:"+sha512);
 
-        String fileSha1 = getDigestFile("jdk-8u191-windows-x64.exe", "SHA-1");
+        String fileSha1 = getDigestFile("a.txt", "SHA-1");
         System.out.println("fileSha1:"+fileSha1);
 
     }
@@ -103,8 +103,8 @@ public class HashDemo {
 ```
  
 
-## 消息认证码
-###  消息认证
+# 消息认证
+###  消息认证码
 
 > **消息认证码（message authentication code）是一种确认完整性并进行认证的技术，取三个单词的首字母，简称为MAC。**
 
@@ -216,3 +216,33 @@ public class MacDemo {
     }
 }
 ```
+#  数字签名
+
+###  签名的生成和验证
+
+> 1. 签名
+>    - 有原始数据对其进行哈希运算   ->   散列值
+>    - 使用非对称加密的<font color="red">私钥</font>对散列值加密 -> 签名
+>    - 将原始数据和签名一并发送给对方
+> 2. 验证
+>    - 接收数据 
+>      - 原始数据
+>      - 数字签名
+>    - 数字签名, 需要使用<font color="red">公钥</font>解密, 得到散列值
+>    - 对原始数据进行哈希运算得到新的散列值
+
+###  非对称加密和数字签名
+
+> 总结: 
+>
+> 1. 数据通信
+>
+> ```
+>  - 公钥加密, 私钥解密
+> 2. 数字签名:
+> - 私钥加密, 公钥解密
+> ```
+
+### 数字签名的方法
+
+![Logo](imgs/3.png)
