@@ -15,7 +15,6 @@ public class HashDemo {
         System.out.println("sha256:"+sha256);
         String sha512 = getDigest(input, "SHA-512");
         System.out.println("sha512:"+sha512);
-
         String fileSha1 = getDigestFile("a.txt", "SHA-1");
         System.out.println("fileSha1:"+fileSha1);
 
